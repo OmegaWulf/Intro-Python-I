@@ -29,7 +29,7 @@ class Waypoint(LatLon):
 # `size`, `lat`, and `lon` to the constructor. What should it inherit from?
 
 # YOUR CODE HERE
-class Geocache:
+class Geocache(Waypoint):
     difficulty = 0
     size = 0
 
