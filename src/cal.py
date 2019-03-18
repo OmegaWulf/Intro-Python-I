@@ -23,7 +23,7 @@ import calendar
 import datetime
 
 inputs = input("Type your input as: month year").split(" ")
-inputNums = [int(i) for i in inputs
+inputNums = [int(i) for i in inputs]
 
 now = datetime.date
 
