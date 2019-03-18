@@ -19,6 +19,26 @@ and does the following:
    Then exit the program.
 """
 
-import sys
 import calendar
-from datetime import datetime
+import datetime
+
+inputs = input("Type your input as: month year").split(" ")
+
+now = datetime.date
+
+if inputs is None:
+    calendar = calendar.TextCalendar()
+    format = calendar.formatmonth(now.year, now.month)
+    print(format)
+
+elif len(inputs) == 1:
+    calendar = calendar.TextCalendar()
+    calendar2 = calendar.formatmonth(now.year, inputs[0])
+    print(format)
+elif len(inputs) == 2:
+    calendar = calendar.TextCalendar()
+    calendar2 = calendar.formatmonth(inputs[1], inputs[0])
+    print(format)
+else:
+    print("Please input your calendar month and year like: 04 2019")
+    exit(1)
