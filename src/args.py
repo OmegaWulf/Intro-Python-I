@@ -16,7 +16,11 @@ print(f1(1, 2))
 
 # YOUR CODE HERE
 
-def f2
+def f2(*n):
+    total = 0
+    for num in n:
+        total += num
+    return total
 
 print(f2(1))                    # Should print 1
 print(f2(1, 3))                 # Should print 4
