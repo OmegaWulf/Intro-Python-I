@@ -23,22 +23,23 @@ import calendar
 import datetime
 
 inputs = input("Type your input as: month year").split(" ")
+inputNums = [int(i) for i in inputs
 
 now = datetime.date
 
-if inputs is None:
+if inputNums is None:
     calendar = calendar.TextCalendar()
-    format = calendar.formatmonth(now.year, now.month)
-    print(format)
+    formatted = calendar.formatmonth(now.year, now.month)
+    print(formatted)
 
-elif len(inputs) == 1:
+elif len(inputNums) == 1:
     calendar = calendar.TextCalendar()
-    calendar2 = calendar.formatmonth(now.year, inputs[0])
-    print(format)
-elif len(inputs) == 2:
+    formatted = calendar.formatmonth(now.year, inputNums[0])
+    print(formatted)
+elif len(inputNums) == 2:
     calendar = calendar.TextCalendar()
-    calendar2 = calendar.formatmonth(inputs[1], inputs[0])
-    print(format)
+    formatted = calendar.formatmonth(inputNums[1], inputNums[0])
+    print(formatted)
 else:
     print("Please input your calendar month and year like: 04 2019")
     exit(1)
