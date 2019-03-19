@@ -22,24 +22,29 @@ and does the following:
 import calendar
 import datetime
 
-inputs = input("Type your input as: month year").split(" ")
-inputNums = [int(i) for i in inputs]
+inputs = input("Type your input as: MM YYYY").split()
+now = datetime.date.today()
 
-now = datetime.date
+print(inputs)
 
-if inputNums is None:
+if not inputs:
     calendar = calendar.TextCalendar()
     formatted = calendar.formatmonth(now.year, now.month)
     print(formatted)
+    exit()
 
-elif len(inputNums) == 1:
+inputNums = [int(i) for i in inputs]
+
+if len(inputNums) == 1:
     calendar = calendar.TextCalendar()
     formatted = calendar.formatmonth(now.year, inputNums[0])
     print(formatted)
+
 elif len(inputNums) == 2:
     calendar = calendar.TextCalendar()
     formatted = calendar.formatmonth(inputNums[1], inputNums[0])
     print(formatted)
+
 else:
     print("Please input your calendar month and year like: 04 2019")
     exit(1)
